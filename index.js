@@ -9,8 +9,8 @@ module.exports = function(dirtyString) {
   cleanString = cleanString.replace(/\//g, '-');
   cleanString = cleanString.replace(/'/g, '');
   cleanString = cleanString.replace(/\s{2,}/, ' ');
-  cleanString = cleanString.replace('"', "''");
-  cleanString = cleanString.replace('”', "''");
+  cleanString = cleanString.replace('"', '');
+  cleanString = cleanString.replace('”', '');
   cleanString = _.trim(cleanString);
   cleanString = _.deburr(cleanString);
   return cleanString;
