@@ -1,5 +1,5 @@
 {
-  "name": "@drdanryan/sanitize-filename",
+  "name": "sanitize-filename",
   "version": "1.0.0",
   "description": "Cleans up filenames by replacing some nasty characters",
   "main": "index.js",
