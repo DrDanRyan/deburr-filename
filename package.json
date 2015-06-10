@@ -1,6 +1,6 @@
 {
-  "name": "@drdanryan/sanitize-filename",
-  "version": "1.0.1",
+  "name": "@drdanryan/deburr-filename",
+  "version": "1.0.0",
   "description": "Cleans up filenames by replacing some nasty characters",
   "main": "index.js",
   "scripts": {
