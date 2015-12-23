@@ -1,15 +1,18 @@
 {
-  "name": "deburr-filename",
+  "name": "@drdanryan/deburr-filename",
   "version": "1.0.0",
   "description": "Cleans up filenames by replacing some nasty characters",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "github:drdanryan/deburr-filename.git",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/drdanryan/deburr-filename"
+  },
   "author": "Dan Ryan",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^3.9.3"
+    "lodash": "*"
   }
 }
