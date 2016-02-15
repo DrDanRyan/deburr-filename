@@ -1,17 +1,20 @@
-var _ = require('lodash');
+var trim = require('lodash/trim');
+var deburr = require('lodash/deburr');
 
 // Function takes a filename string (without extension) and removes/replaces characters
 // that are not appropriate for filenames
 module.exports = function(dirtyString) {
-  var cleanString = dirtyString.replace(/\./g, '');
-  cleanString = cleanString.replace(/,/g, '');
-  cleanString = cleanString.replace(/&/g, 'and');
-  cleanString = cleanString.replace(/\//g, '-');
-  cleanString = cleanString.replace(/'/g, '');
-  cleanString = cleanString.replace(/\s{2,}/, ' ');
-  cleanString = cleanString.replace('"', '');
-  cleanString = cleanString.replace('”', '');
-  cleanString = _.trim(cleanString);
-  cleanString = _.deburr(cleanString);
+  var cleanString = dirtyString
+    .replace(/\./g, '')
+    .replace(/,/g, '')
+    .replace(/'/g, '')
+    .replace('"', '')
+    .replace('”', '')
+    .replace(':', '')
+    .replace(/&/g, 'and')
+    .replace(/\//g, '-')
+    .replace(/\s{2,}/, ' ');
+  cleanString = trim(cleanString);
+  cleanString = deburr(cleanString);
   return cleanString;
 };
