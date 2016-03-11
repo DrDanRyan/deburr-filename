@@ -8,12 +8,12 @@ module.exports = function(dirtyString) {
     .replace(/\./g, '')
     .replace(/,/g, '')
     .replace(/'/g, '')
-    .replace('"', '')
-    .replace('”', '')
-    .replace(':', '')
+    .replace(/"/g, '')
+    .replace(/”/g, '')
+    .replace(/:/g, '')
     .replace(/&/g, 'and')
     .replace(/\//g, '-')
-    .replace(/\s{2,}/, ' ');
+    .replace(/\s{2,}/g, ' ');
   cleanString = trim(cleanString);
   cleanString = deburr(cleanString);
   return cleanString;
