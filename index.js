@@ -11,6 +11,7 @@ module.exports = function(dirtyString) {
     .replace(/"/g, '')
     .replace(/”/g, '')
     .replace(/:/g, '')
+    .replace(/#/g, '')
     .replace(/&/g, 'and')
     .replace(/\//g, '-')
     .replace(/\s{2,}/g, ' ');
